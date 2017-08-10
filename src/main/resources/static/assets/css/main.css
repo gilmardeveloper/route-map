@@ -2,13 +2,26 @@ html, body {
     height: 100%;
 }
 
+#mapa-nav{
+	margin-bottom: 0;
+	border-bottom: 0;
+}
+
 #map{
- margin-top: 10vh;
- Width: 100%;
- height: 90%;
+	margin-top: 0vh;
+	Width: 100%;
+	height: 75.5vh;	
+}
+
+.main-panel .card{
+	margin-top: 9vh;
+	margin-bottom: 0px;
+}
+
+#card-info{
+	text-align: center;
 }
 
 #div-form-mapa form{
-    margin-top: 10vh;
-	padding-top: 3vh;
+	padding-top: 4vh;
 }

@@ -88,39 +88,62 @@
 		</div>
 		<!-- fim do sidebar -->
 
-		<!-- início do main-panel -->
+			<!-- inicio do main-panel -->
 		<div class="main-panel">
-			
-			<!-- navbar -->
-			<nav class="navbar navbar-transparent navbar-absolute">
+
+			<!-- inicio do navbar -->
+			<nav class="navbar navbar-success navbar-absolute">
 				
+				<!-- inicio do container -->
 				<div class="container-fluid">
-					
+
+					<!-- inicio do navbar-header -->
 					<div class="navbar-header">
+
 						<button type="button" class="navbar-toggle" data-toggle="collapse">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="#">Meu Maps</a>
+						<a class="navbar-brand">Meu Maps</a>
 					</div>
-					
+					<!-- fim do navbar-header -->
+
+					<!-- inicio do navbar-collapse -->
 					<div class="collapse navbar-collapse">
-						<div class="navbar-form navbar-right" role="search">
-							<div class="form-group  is-empty">
-								<input id="end" type="text" size="100" class="form-control" placeholder="Informe um local" onkeypress="addAddress(event)" />
-								<span class="material-input"></span>
-							</div>
-							<button id="btn_search" type="button" class="btn btn-success btn-round btn-just-icon">
-								<i class="material-icons">search</i><div class="ripple-container"></div>
-							</button>
-						</div>
+												
+
 					</div>
+					<!-- fim do navbar-collapse -->
 
 				</div>
+				<!-- fim do container -->
+
 			</nav>
-			<!-- navbar -->
+			<!-- fim do navbar -->
+
+			<!-- inicio do div-form -->
+			<div id="div-form-mapa" class="card">
+				<div class="card-content">
+					<div class="form-inline" role="search">
+					<div class="col-xs-10 col-sm-6">
+						<div class="form-group  is-empty">
+							<input id="end" type="text" class="form-control"
+								size="75" placeholder="Infomer um local" onkeypress="addAddress(event)" />
+							<span class="material-input"></span>
+						</div>
+					</div>		
+					<div class="col-xs-2 col-sm-6">
+						<button id="btn_search" type="button"
+							class="btn btn-primary btn-round btn-just-icon">
+							<i class="material-icons">search</i>
+							<div class="ripple-container"></div>
+						</button>
+					</div>		
+					</div>
+				</div>
+			</div>
+			<!-- fim do div-form -->
 
 			<!-- inicio do mapa -->
 			<div id="map"></div>
@@ -145,7 +168,6 @@
 
 <!-- js mapa  -->
 <script async="async" defer="defer"	th:src="@{https://maps.googleapis.com/maps/api/js(key=AIzaSyBUvCc_jRRHW2twJiPL75vNB0MDix1SmKs, callback=init)}"></script>
-<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUvCc_jRRHW2twJiPL75vNB0MDix1SmKs&callback=init"></script> -->
 <script src="js/model/DirectionsService.js"></script>
 <script src="js/model/Marker.js"></script>
 <script src="js/model/Geocoder.js"></script>
