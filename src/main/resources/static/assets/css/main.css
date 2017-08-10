@@ -1,0 +1,14 @@
+html, body {
+    height: 100%;
+}
+
+#map{
+ margin-top: 10vh;
+ Width: 100%;
+ height: 90%;
+}
+
+#div-form-mapa form{
+    margin-top: 10vh;
+	padding-top: 3vh;
+}

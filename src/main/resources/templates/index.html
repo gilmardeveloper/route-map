@@ -1,0 +1,156 @@
+<!-- 
+	projeto: Template Mapa
+	autor: Gilmar Carlos
+-->
+
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/new_logo.png" />
+	<link rel="icon" type="image/png" href="assets/img/new_logo.png" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>Meu Mapa</title>
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+	<meta name="viewport" content="width=device-width" />
+
+	<!-- css bootstrap -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+
+	<!--  css template    -->
+	<link href="assets/css/material-dashboard.css" rel="stylesheet" />
+
+	<!--  css principal    -->
+	<link href="assets/css/main.css" rel="stylesheet" />
+
+	<!--  fontes e icones -->
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet" />
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css' />
+</head>
+
+<body>
+
+	<!-- início do wrapper -->
+	<div class="wrapper">
+
+		<!-- início do sidebar -->
+		<div class="sidebar" data-color="green" data-image="assets/img/sidebar-1.jpg">
+
+			<!-- logo -->
+			<div class="logo">
+				<a href="https://github.com/gilmardeveloper" class="simple-text">
+					GitHub
+				</a>
+			</div>
+
+			<!-- sidebar nav -->
+			<div class="sidebar-wrapper">
+
+				<ul class="nav">
+					<li class="active">
+						<a id="show_route" href="#mostrar-rota">
+	                        <i class="material-icons">layers</i>
+	                        <p>Mostrar Rota</p>
+	                    </a>
+					</li>
+					<li class="active">
+						<a id="hide_route" href="#esconder-rota">
+	                        <i class="material-icons">layers_clear</i>
+	                        <p>Esconder Rota</p>
+	                    </a>
+					</li>
+					<li class="active">
+						<a id="hide_route" th:href="@{/}">
+	                        <i class="material-icons">map</i>
+	                        <p>Nova Rota</p>
+	                    </a>
+					</li>
+					<li class="active">
+						<a id="show_markers" href="#mostrar-marcadores">
+	                        <i class="material-icons">place</i>
+	                        <p>Mostrar Marcadores</p>
+	                    </a>
+					</li>
+					<li class="active">
+						<a id="hide_markers" href="#esconder-marcadores">
+	                        <i class="material-icons">pin_drop</i>
+	                        <p>Esconder Marcadores</p>
+	                    </a>
+					</li>
+				</ul>
+
+			</div>
+			<!-- sidebar nav -->
+
+		</div>
+		<!-- fim do sidebar -->
+
+		<!-- início do main-panel -->
+		<div class="main-panel">
+			
+			<!-- navbar -->
+			<nav class="navbar navbar-transparent navbar-absolute">
+				
+				<div class="container-fluid">
+					
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">Meu Maps</a>
+					</div>
+					
+					<div class="collapse navbar-collapse">
+						<div class="navbar-form navbar-right" role="search">
+							<div class="form-group  is-empty">
+								<input id="end" type="text" size="100" class="form-control" placeholder="Informe um local" onkeypress="addAddress(event)" />
+								<span class="material-input"></span>
+							</div>
+							<button id="btn_search" type="button" class="btn btn-success btn-round btn-just-icon">
+								<i class="material-icons">search</i><div class="ripple-container"></div>
+							</button>
+						</div>
+					</div>
+
+				</div>
+			</nav>
+			<!-- navbar -->
+
+			<!-- inicio do mapa -->
+			<div id="map"></div>
+			<!-- fim do mapa -->
+
+		</div>
+		<!-- fim do main-panel -->
+
+	</div>
+	<!-- fim do wrapper -->
+
+</body>
+
+<!--   js base   -->
+<script src="assets/js/jquery-3.1.0.min.js" type="text/javascript"></script>
+<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="assets/js/bootstrap-notify.js"></script>
+<script src="assets/js/material.min.js" type="text/javascript"></script>
+
+<!-- js template  -->
+<script src="assets/js/material-dashboard.js"></script>
+
+<!-- js mapa  -->
+<script async="async" defer="defer"	th:src="@{https://maps.googleapis.com/maps/api/js(key=AIzaSyBUvCc_jRRHW2twJiPL75vNB0MDix1SmKs, callback=init)}"></script>
+<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUvCc_jRRHW2twJiPL75vNB0MDix1SmKs&callback=init"></script> -->
+<script src="js/model/DirectionsService.js"></script>
+<script src="js/model/Marker.js"></script>
+<script src="js/model/Geocoder.js"></script>
+<script src="js/model/Route.js"></script>
+<script src="js/controller/MapController.js"></script>
+<script src="js/controller/PageController.js"></script>
+
+</html>
