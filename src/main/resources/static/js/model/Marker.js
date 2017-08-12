@@ -17,7 +17,7 @@ var marker;
 function newMarker(map, latLng) {
    marker = new google.maps.Marker({map: map, position: latLng});
    markers.push(marker);    
-}
+};
 
 /** 
  * @method setAllMarkers
@@ -26,7 +26,7 @@ function newMarker(map, latLng) {
  */
 function setAllMarkers(map) {
     markers.forEach(item => item.setMap(map));
-}
+};
 
 /** 
  * @method clearAllMarkers
@@ -34,7 +34,7 @@ function setAllMarkers(map) {
  */
 function clearAllMarkers() {
     markers.forEach(item => item.setMap(null));
-}
+};
 
 /** 
  * @method getMarkersCount
@@ -43,7 +43,7 @@ function clearAllMarkers() {
  */
 function getMarkersCount() {
     return markers.length;
-}
+};
 
 /** 
  * @method isMarker
@@ -56,4 +56,4 @@ function isMarker() {
     } else {
         return false;
     }
-}
+};

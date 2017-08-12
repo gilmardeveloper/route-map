@@ -22,4 +22,4 @@ function parseLatLng(map, address) {
             newMarker(map, results[0].geometry.location);
         }
     });
-}
+};

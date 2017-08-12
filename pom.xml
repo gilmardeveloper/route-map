@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>br.com.projeto</groupId>
+	<groupId>github.com.gilmardeveloper</groupId>
 	<artifactId>meumapa</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
@@ -51,10 +51,35 @@
 	</build>
 
 
+	
+	<description>Projeto de mapa dinâmico para criação de rotas </description>
+	<url>https://github.com/gilmardeveloper/route-map</url>
+	
 	<organization>
 		<name>Gilmar Carlos</name>
 		<url>https://github.com/gilmardeveloper</url>
 	</organization>
-	<description>Projeto de mapa dinâmico para criação de rotas </description>
-	<url>https://github.com/gilmardeveloper/route-map</url>
+
+	<scm>
+		<connection>scm:git:git://github.com/gilmardeveloper/route-map.git</connection>
+		<developerConnection>scm:git:ssh://github.com:gilmardeveloper/route-map.git</developerConnection>
+		<url>https://github.com/gilmardeveloper/route-map</url>
+	</scm>
+	
+	<licenses>
+		<license>
+			<name>The Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>Gilmar Carlos</name>
+			<email>gilmarcarlos.developer@gmail.com</email>
+			<organization>GilmarDeveloper</organization>
+			<organizationUrl>https://github.com/gilmardeveloper</organizationUrl>
+		</developer>
+	</developers>
+	
 </project>

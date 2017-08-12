@@ -18,7 +18,7 @@ function init() {
     options = {zoom: 4, center: {lat: -15.623, lng: -47.878}};
     map = new google.maps.Map(view, options);
     directionsServiceInit(map);
-}
+};
 
 /** 
  * @method addMarker
@@ -27,7 +27,7 @@ function init() {
  */
 function addMarker(position) {
     parseLatLng(map, position);
-}
+};
 
 /** 
  * @method showMarkers
@@ -39,7 +39,7 @@ function showMarkers() {
     } else {
         showNotification("Adicione uma localidade no mapa");
     }
-}
+};
 
 /** 
  * @method hideMarkers
@@ -51,7 +51,7 @@ function hideMarkers() {
     } else {
         showNotification("Adicione uma localidade no mapa");
     }
-}
+};
 
 /** 
  * @method showRoute
@@ -67,7 +67,7 @@ function showRoute() {
     } else {
         showNotification("Adicione pelo menos duas localidade no mapa");
     }
-}
+};
 
 /** 
  * @method hideRoute
@@ -79,7 +79,7 @@ function hideRoute() {
     } else {
         showNotification("Adicione pelo menos duas localidade no mapa");
     }
-}
+};
 
 /** 
  * @method showNotification
@@ -100,7 +100,7 @@ function showNotification(mensagem){
                 align: 'center'
             }
         });
-	}
+	};
 
 
 

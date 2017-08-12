@@ -16,7 +16,7 @@ var display;
 function directionsServiceInit(map){
     service = new google.maps.DirectionsService();
     display = new google.maps.DirectionsRenderer({map: map, draggable : true});    
-}
+};
 
 /** 
  * @method getServiceDirections
@@ -25,7 +25,7 @@ function directionsServiceInit(map){
  */
 function getServiceDirections(){
     return service;
-}
+};
 
 /** 
  * @method getDisplayDirections
@@ -34,7 +34,7 @@ function getServiceDirections(){
  */
 function getDisplayDirections(){
     return display;
-}
+};
 
 /** 
  * @method getDisplayDirections
@@ -42,6 +42,6 @@ function getDisplayDirections(){
  */
 function directionsRoute(){
     calcRoute(service, display);
-}
+};
 
 
